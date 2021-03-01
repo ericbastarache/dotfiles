@@ -27,7 +27,7 @@ map <silent><Leader>p "*p
 map <silent><Leader>c "*y
 map <silent><Leader>x "*x
 nnoremap <Leader>wq <esc>:wq<CR>
-nnoremap <Leader>s <esc>:w<CR>
+nnoremap <Leader>ws <esc>:w<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>v :vsp<CR>
 nnoremap <Leader>h :sp<CR>
