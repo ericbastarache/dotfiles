@@ -23,14 +23,18 @@ set showmatch
 set ttyfast
 nnoremap <SPACE> <Nop>
 let mapleader="\<Space>"
-map <silent><Leader>p "*p<esc> 
-map <silent><Leader>c "*y<esc>
-map <silent><Leader>x "*x<esc>
-nnoremap <Leader>q <esc>:wq<CR>
-nnoremap <Leader>w <esc>:w<CR>
+map <silent><Leader>p "*p 
+map <silent><Leader>c "*y
+map <silent><Leader>x "*x
+nnoremap <Leader>wq <esc>:wq<CR>
+nnoremap <Leader>s <esc>:w<CR>
 nnoremap <Leader>f :Files<CR>
-nnoremap <Leader>wv :vsp<CR>
-nnoremap <Leader>wh :sp<CR>
+nnoremap <Leader>v :vsp<CR>
+nnoremap <Leader>h :sp<CR>
+nnoremap <Leader>wl <C-w><C-l>
+nnoremap <Leader>wj <C-w><C-j>
+nnoremap <Leader>wk <C-w><C-k>
+nnoremap <Leader>wh <C-w><C-h>
 nnoremap <Leader><S-v> <C-v>
 nnoremap <S-k> :m-2<CR>
 nnoremap <S-j> :m+<CR>
@@ -40,6 +44,8 @@ inoremap <Leader>es <esc>
 vnoremap <Leader>es <esc>
 nnoremap <Leader>e $
 nnoremap <Leader>s 0
+vnoremap < <gv
+vnoremap > >gv
 source ~/.vim_runtime/vimrcs/basic.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
