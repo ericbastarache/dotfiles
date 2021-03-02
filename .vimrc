@@ -3,6 +3,7 @@ source ~/.vim/bundle/fzf/plugin/fzf.vim
 set rtp+=~/.vim/bundle/fzf/bin/fzf
 let g:fzf_layout = { 'down': '40%' }
 set number
+set rnu
 set omnifunc=javascriptcomplete#CompleteJS
 set omnifunc=htmlcomplete#CompleteTags
 set omnifunc=csscomplete#CompleteCSS
