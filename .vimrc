@@ -2,8 +2,11 @@ set runtimepath+=~/.vim_runtime
 source ~/.vim/bundle/fzf/plugin/fzf.vim
 set rtp+=~/.vim/bundle/fzf/bin/fzf
 let g:fzf_layout = { 'down': '40%' }
+let g:netrw_winsize = 30
+set termguicolors
 set number
 set rnu
+set scrolloff=8
 set omnifunc=javascriptcomplete#CompleteJS
 set omnifunc=htmlcomplete#CompleteTags
 set omnifunc=csscomplete#CompleteCSS
@@ -18,31 +21,32 @@ set ruler
 set cursorline
 set cursorcolumn
 set timeout timeoutlen=3000 ttimeoutlen=100
-highlight CursorColumn guibg=#636363
-set visualbell
+set belloff=all
 set showmatch
 set ttyfast
+set showcmd
 nnoremap <SPACE> <Nop>
 let mapleader="\<Space>"
-map <silent><Leader>p "*p 
-map <silent><Leader>c "*y
-map <silent><Leader>x "*x
+vnoremap <leader>p "_dP
+vnoremap <leader>y "+y
+nnoremap <leader>y "+y
+nnoremap <leader>Y gg"+yG
+vnoremap J :m '>+1<CR>gv=gv 
+vnoremap K :m '>-2<CR>gv=gv 
 nnoremap <Leader>wq <esc>:wq<CR>
-nnoremap <Leader>ws <esc>:w<CR>
+nnoremap <Leader>q <esc>:q<CR>
+nnoremap <Leader>ww <esc>:w<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>v :vsp<CR>
 nnoremap <Leader>h :sp<CR>
+nnoremap <Leader>pv :Lex<CR>
+nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <Leader>wl <C-w><C-l>
 nnoremap <Leader>wj <C-w><C-j>
 nnoremap <Leader>wk <C-w><C-k>
 nnoremap <Leader>wh <C-w><C-h>
 nnoremap <Leader><S-v> <C-v>
-nnoremap <S-k> :m-2<CR>
-nnoremap <S-j> :m+<CR>
-inoremap <S-k> <Esc>:m-2<CR>
-inoremap <S-j> <Esc>:m+<CR>
-inoremap <Leader>es <esc>
-vnoremap <Leader>es <esc>
+vnoremap <Leader>c <esc>
 nnoremap <Leader>e $
 nnoremap <Leader>s 0
 vnoremap < <gv
@@ -52,6 +56,7 @@ source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 call plug#begin('~/.vim/plugged')
+Plug 'ayu-theme/ayu-vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
@@ -68,14 +73,10 @@ Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'mogelbrod/vim-jsonpath'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 call plug#end()
-let g:gruvbox_contrast_dark = 'hard'
-let g:airline_theme='bubblegum'
-autocmd vimenter * ++nested colorscheme gruvbox
-
+let ayucolor="dark"
+colorscheme ayu
 try
     source ~/.vim_runtime/my_configs.vim
 catch
