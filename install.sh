@@ -14,6 +14,13 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 brew install vim --with-override-system-vi
 brew install git
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
+git clone https://github.com/ericbastarache/dotfiles.git
+cd dotfiles
+cp .tmux.conf.local ~/.tmux.conf.local
+#cp .tmux/.tmux.conf.local .
 brew install fzf
 brew install node
 

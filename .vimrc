@@ -1,9 +1,6 @@
-set runtimepath+=~/.vim_runtime
 source ~/.vim/bundle/fzf/plugin/fzf.vim
-set rtp+=~/.vim/bundle/fzf/bin/fzf
 let g:fzf_layout = { 'down': '40%' }
 let g:netrw_winsize = 30
-set termguicolors
 set number
 set rnu
 set scrolloff=8
@@ -51,13 +48,8 @@ nnoremap <Leader>e $
 nnoremap <Leader>s 0
 vnoremap < <gv
 vnoremap > >gv
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
 call plug#begin('~/.vim/plugged')
 Plug 'ayu-theme/ayu-vim'
-Plug 'preservim/nerdtree'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
@@ -74,10 +66,8 @@ Plug 'mogelbrod/vim-jsonpath'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'morhetz/gruvbox'
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+Plug 'tyrannicaltoucan/vim-deep-space'
 call plug#end()
+set termguicolors
 let ayucolor="dark"
 colorscheme ayu
-try
-    source ~/.vim_runtime/my_configs.vim
-catch
-endtry
