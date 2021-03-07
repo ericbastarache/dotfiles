@@ -9,7 +9,6 @@ set omnifunc=htmlcomplete#CompleteTags
 set omnifunc=csscomplete#CompleteCSS
 set guifont=Comic\ Shanns\ Regular
 set tabstop=4
-set autoindent
 set expandtab
 set smarttab
 set hlsearch
