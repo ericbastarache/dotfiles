@@ -11,7 +11,7 @@ brew install gnu-sed --with-default-names
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-brew install vim --with-override-system-vi
+brew install neovim
 brew install git
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 cd
@@ -23,5 +23,8 @@ cp .tmux.conf.local ~/.tmux.conf.local
 #cp .tmux/.tmux.conf.local .
 brew install fzf
 brew install node
+git clone https://github.com/ericbastarache/todos-cli.git
+cd todos-cli
+npm i -g
 
 brew cleanup

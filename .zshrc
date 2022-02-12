@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+set +H
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ericbastarache/.oh-my-zsh"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -100,3 +101,8 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias tmux="tmux -2"
+alias vim="nvim"
+alias add="todos add"
+alias F="todos done"
+alias list="todos list"
+alias del="todos delete"
