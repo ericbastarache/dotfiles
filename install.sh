@@ -20,6 +20,7 @@ ln -s -f .tmux/.tmux.conf
 git clone https://github.com/ericbastarache/dotfiles.git
 cd dotfiles
 cp .tmux.conf.local ~/.tmux.conf.local
+cp init.lua ~/.config/nvim/init.lua 
 #cp .tmux/.tmux.conf.local .
 brew install fzf
 brew install node
